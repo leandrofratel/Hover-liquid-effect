@@ -34,7 +34,7 @@ body {
 
 .logo-text {
      letter-spacing: 1rem;
-     color: #e8cab3;
+     color: #D3A284;
      font-weight: 300;
      font-size: 80px;
      position: absolute;
@@ -73,7 +73,7 @@ span.two {
 .menu {
      z-index: 1;
      position: fixed;
-     background: #E8CAB3;
+     background: #D3A284;
      height: 100%;
      width: 100%;
      top: -100%;
@@ -112,8 +112,20 @@ ul, li {
      transition-duration: .7s;
 }
 
-.menu-indice:hover{
-     text-decoration: underline;
+.menu-indice::after {
+     content: "";
+     display: block;
+     width: 0;
+     height: 3px;
+     position: absolute;
+     background-color: currentColor;
+     top: 85%;
+     transition: all 850ms ease;
+}
+
+.menu-indice:hover::after {
+     left: 0%;
+     width: 100%;
 }
 
 .rodape {
@@ -127,10 +139,6 @@ ul, li {
 .rodape a {
      text-decoration: none;
      color: #010101
-}
-
-.rodape a:hover{
-     text-decoration: underline;
 }
 
 .span-rodape {
