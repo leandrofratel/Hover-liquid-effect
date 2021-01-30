@@ -1,26 +1,17 @@
-
-
-/*! Blocos */
-.contend-bloc {
-    position: absolute;
-    display: flex;
+/*! Reset e definição da Página */
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    height: 100vh;
+    font-family: 'Crimson Text', serif;
 }
 
-/*? Exemplo */
-/* .contend-bloc-um {
-    margin: 10%;
-    display: inline-block;
-    width: 100%;
+body {
+    background: #000 url(bg.jpg) no-repeat fixed
 }
 
-.hero-title {
-    color: cornsilk;
-    position: relative;
-    font-size: 150px;
-    position: absolute;
-    right: 42%;
-} */
+/*! Remove a barra de rolagem */
+::-webkit-scrollbar {
+    display: none;
+}
