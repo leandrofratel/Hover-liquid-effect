@@ -1,11 +1,13 @@
 /*! Define o posicionamento do Logo */
 .logo-div {
+     position: fixed;
      width: 100%;
      height: 100vh;
      position: absolute;
 }
 
 .logo-img {
+     position: fixed;
      width: 400px;
      opacity: 0.2;
      position: absolute;
@@ -15,6 +17,7 @@
 }
 
 .logo-text {
+     position: fixed;
      letter-spacing: 1rem;
      color: #D3A284;
      opacity: 0.6;

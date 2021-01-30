@@ -22,84 +22,85 @@
 
 </head>
 <body>
-
-<!--! Logotipo-->
-<div class="logotipo">
-    <div class="logo-div">
-        <img class="logo-img" src="logo_sem borda.png" alt="">
-        <h1 class="logo-text">JULIARTDESIGN</h1>
-    </div>
-</div>
-
-<!--! Barra de Navegação-->
-<div class="barra-de-navegacao">
-    <nav>
-        <div class="toggle-btn">
-            <span class="one"></span>
-            <span class="two"></span>
-        </div>
-        <div class="menu">
-            <div class="data">
-                <ul>
-                    <li>
-                        <a class="menu-indice" href="/">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="menu-indice" href="#">Sobre</a>
-                    </li>
-                    <li>
-                        <a class="menu-indice" href="#">Contato</a>
-                    </li>
-                </ul>
-                <div class="rodape">
-                    <span class="span-rodape">JULIARTDESIGN <span class="marca-registrada">&#174;</span></span>
-                    <a class="span-rodape" href="#">password</a>
-                    <span class="span-rodape">CREATED BY &copy;HANDCODE 2021</span>
-                </div>  
+    <section>
+        <!--! Logotipo-->
+        <div class="logotipo">
+            <div class="logo-div">
+                <img class="logo-img" src="logo_sem borda.png" alt="">
+                <h1 class="logo-text">JULIARTDESIGN</h1>
             </div>
         </div>
-    </nav>
-</div>
+    </section>
+    <section>
+        <!--! Barra de Navegação-->
+        <div class="barra-de-navegacao">
+            <nav>
+                <div class="toggle-btn">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                </div>
+                <div class="menu">
+                    <div class="data">
+                        <ul>
+                            <li>
+                                <a class="menu-indice" href="/">Portfolio</a>
+                            </li>
+                            <li>
+                                <a class="menu-indice" href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a class="menu-indice" href="#">Contato</a>
+                            </li>
+                        </ul>
+                        <div class="rodape">
+                            <span class="span-rodape">JULIARTDESIGN <span class="marca-registrada">&#174;</span></span>
+                            <a class="span-rodape" href="#">password</a>
+                            <span class="span-rodape">CREATED BY &copy;HANDCODE 2021</span>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section>
+        <main>
+            
+        </main>
+    </section>
 
-<!--! Conteudo da Página-->
-<div class="conteudo-da-pagina">
-</div>
+    <!--! Manupulação do menu de navegação -->
+    <script type="text/javascript">
 
-<!--! Manupulação do menu de navegação -->
-<script type="text/javascript">
+    var t1 = new TimelineMax({paused: true});
 
-  var t1 = new TimelineMax({paused: true});
+    t1.to(".one", 0.8, {
+        y: 6,
+        rotation: 45,
+        ease: Expo.easeInOut
+    });
+    t1.to(".two", 0.8, {
+        y: -6,
+        rotation: -45,
+        ease: Expo.easeInOut,
+        delay: -0.8
+    });
 
-  t1.to(".one", 0.8, {
-      y: 6,
-      rotation: 45,
-      ease: Expo.easeInOut
-  });
-  t1.to(".two", 0.8, {
-      y: -6,
-      rotation: -45,
-      ease: Expo.easeInOut,
-      delay: -0.8
-  });
+    t1.to(".menu", 2, {
+        top: "0%",
+        ease: Expo.easeInOut,
+        delay: -0.8
+    });
 
-  t1.to(".menu", 2, {
-      top: "0%",
-      ease: Expo.easeInOut,
-      delay: -0.8
-  });
+    t1.staggerFrom(".menu ul li", 2, {x: -200, opacity: 0, ease:Expo.easeOut}, 0.3);
 
-  t1.staggerFrom(".menu ul li", 2, {x: -200, opacity: 0, ease:Expo.easeOut}, 0.3);
+    t1.reverse();
+    $(document).on("click", ".toggle-btn", function() {
+        t1.reversed(!t1.reversed());
+    });
+    $(document).on("click", "a", function() {
+        t1.reversed(!t1.reversed());
+    });
 
-  t1.reverse();
-  $(document).on("click", ".toggle-btn", function() {
-      t1.reversed(!t1.reversed());
-  });
-  $(document).on("click", "a", function() {
-      t1.reversed(!t1.reversed());
-  });
-
-</script>
-
-
+    </script>
 </body>
 </html>

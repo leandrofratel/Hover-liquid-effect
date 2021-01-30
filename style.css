@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-    background: #000 url(bg.jpg) no-repeat fixed
+    background: #000 url(bg.jpg) fixed
 }
 
 /*! Remove a barra de rolagem */
